@@ -1,157 +1,167 @@
-# List of global tags:
-# %nl% - Goes to new line.
-# %username% - Replaces the username of the player receiving the message.
-# %displayname% - Replaces the nickname (and colors) of the player receiving the message.
+# Global tag listesi
+# %nl% - Yeni satıra geçer
+# %username% - Mesajları alan oyuncunun kullanıcı adı
+# %displayname% - Mesajları alan oyuncunun görünen ismi (renk kodları dahil)
 
-# Registration
+# Kayıt
 registration:
-    disabled: '&cOyun icin kayit olma kapatildi!'
-    name_taken: '&cSenin adinda daha once birisi kaydolmus!'
-    register_request: '&3Lutfen kayit komutunu kullanin "/register <sifre> <TekrarSifre>"'
-    command_usage: '&cKullanim: /register <sifre> <TekrarSifre>'
-    reg_only: '&4Sunucuya kayit sadece internet uzerinden yapilmakta! Lutfen http://ornek.com sitesini kayit icin ziyaret edin!'
-    success: '&2Basariyla kaydoldun!'
-    kicked_admin_registered: 'Bir yetkili seni kayit etti; tekrardan giris yap'
+  register_request: '&3Lütfen şu komutu kullanarak kayıt olun /register <şifre> <tekrar şifre>'
+  command_usage: '&cKullanım: /register <şifre> <tekrar şifre>'
+  reg_only: '&4Sadece kayıtlı oyuncular sunucuya katılabilir! Lütfen http://example.com adresinden kayıt olun!'
+  kicked_admin_registered: 'Bir yetkili sizi kaydetti, lütfen tekrar giriş yapın.'
+  success: '&2Başarıyla kayıt olundu!'
+  disabled: '&cOyun içinden kayıt olma kapalıdır!'
+  name_taken: '&cBu kullanıcı adı ile zaten kayıt olunmuş!'
 
-# Password errors on registration
+# Şifre hataları ve kayıt
 password:
-    match_error: '&cSifre eslesmiyor, tekrar deneyin!'
-    name_in_password: '&cSifrenize adinizi koyamazsiniz, lutfen farkli bir sifre secin...'
-    unsafe_password: '&cSectiginiz sifre guvenli degil, lutfen farkli bir sifre secin...'
-    forbidden_characters: '&4Sifrenizde izin verilmeyen karakterler bulunmakta. Izin verilen karakterler: %valid_chars'
-    wrong_length: '&cSenin sifren ya cok kisa yada cok uzun! Lutfen farkli birsey dene!'
+  match_error: '&cŞifreler eşleşmedi, lütfen tekrar deneyin!'
+  name_in_password: '&cŞifrenizi isminizle aynı yapamazsınız, lütfen farklı bir şifre seçin...'
+  unsafe_password: '&cSeçilen şifre güvenli değil, lütfen farklı bir şifre seçin...'
+  forbidden_characters: '&4Şifreniz kabul edilmeyen karakterler içeriyor. Kabul edilen karakterler: %valid_chars'
+  wrong_length: '&cŞifreniz çok kısa veya çok uzun! Lütfen başka bir şifre ile deneyin!'
 
-# Login
+# Giriş
 login:
-    command_usage: '&cKullanim: /login <sifre>'
-    wrong_password: '&cYanlis sifre!'
-    success: '&2Giris basarili!'
-    login_request: '&cLutfen giris komutunu kullanin "/login <sifre>"'
-    timeout_error: '&4Giris izni icin verilen zaman suresini astigin icin sunucudan atildin, tekrar deneyin!'
+  command_usage: '&cKullanım: /login <şifre>'
+  wrong_password: '&cYanlış şifre!'
+  success: '&2Giriş başarılı!'
+  login_request: '&cLütfen şu komutu kullanarak giriş yapın: /login <şifre>'
+  timeout_error: '&4Yeterince hızlı giriş yapmadığınız için sunucudan atıldınız, lütfen tekrar deneyin!'
 
-# Errors
+# Hatalar
 error:
-    denied_command: '&cSuanda bu komutu kullanamazsin!'
-    denied_chat: '&cSuanda sohbeti kullanamazsin!'
-    unregistered_user: '&cBu oyuncu kayitli degil!'
-    not_logged_in: '&cGiris yapmadin!'
-    no_permission: '&4Bunu yapmak icin iznin yok!'
-    unexpected_error: '&4Beklenmedik bir hata olustu, yetkili ile iletisime gecin!'
-    max_registration: '&cSen maksimum kayit sinirini astin (%reg_count/%max_acc %reg_names)!'
-    logged_in: '&cZaten giris yaptin!'
-    kick_for_vip: '&3Bir VIP oyuna giris yaptigi icin atildin!'
-    kick_unresolved_hostname: '&cBir hata olustu: cozumlenemeyen oyuncu bilgisayar adi!'
-    tempban_max_logins: '&cBir cok kez yanlis giris yaptiginiz icin gecici olarak banlandiniz.'
+  unregistered_user: '&cBu kullanıcı kayıtlı değil!'
+  denied_command: '&cGiriş yapmadan komut kullanamazsınız!'
+  denied_chat: '&cGiriş yapmadan sohbeti kullanamazsınız!'
+  not_logged_in: '&cGiriş yapmamışsınız!'
+  tempban_max_logins: '&cÇok fazla kez yanlış giriş yaptığınız için geçici olarak yasaklandınız.'
+  max_registration: '&cBu IP adresi ile maksimum kayıt limitine ulaşmışsınız: (%reg_count/%max_acc %reg_names)'
+  no_permission: '&4Bu işlemi gerçekleştirmek için yetkiniz yok!'
+  unexpected_error: '&4Beklenmeyen bir hata oluştu, lütfen bir yetkiliye danışın!'
+  kick_for_vip: '&3Sunucu doluyken bir VIP kullanıcı katıldı!'
+  logged_in: '&cZaten giriş yapmışsınız!'
+  kick_unresolved_hostname: '&cBir hata oluştu: bilinmeyen adres.'
 
 # AntiBot
 antibot:
-    kick_antibot: 'AntiBot koruma modu aktif! Birkac dakika sonra tekrar girmeyi deneyin.'
-    auto_enabled: '&4[AntiBotServis] Saldiri oldugu icin AntiBot aktif edildi!'
-    auto_disabled: '&2[AntiBotServis] AntiBot, %m dakika sonra deaktif edilecek!'
+  kick_antibot: 'AntiBot modu aktif edildi! Lütfen sunucuya katılmadan önce birkaç dakika bekleyin.'
+  auto_enabled: '&4[AntiBotServisi] Çok sayıda bağlantı nedeniyle AntiBot etkinleştirildi!'
+  auto_disabled: '&2[AntiBotServisi] AntiBot modu %m dakika sonra kapatıldı!'
 
-# Unregister
 unregister:
-    success: '&cKayit basariyla kaldirildi!'
-    command_usage: '&cKullanim: /unregister <sifre>'
+  success: '&cKayıt başarıyla kaldırıldı.'
+  command_usage: '&cKullanım: /unregister <şifre>'
 
-# Other messages
+# Diğer mesajlar
 misc:
-    account_not_activated: '&cHeabiniz henuz aktif edilmemis, e-postanizi kontrol edin!'
-    password_changed: '&2Sifre basariyla degistirildi!'
-    logout: '&2Basariyla cikis yaptin!'
-    reload: '&2Ayarlar ve veritabani yenilendi!'
-    usage_change_password: '&cKullanim: /changepassword <eskiSifre> <yeniSifre>'
-    accounts_owned_self: 'Sen %count hesaba sahipsin:'
-    accounts_owned_other: 'Oyuncu %name %count hesaba sahip:'
+  accounts_owned_self: '%count adet hesabınız var:'
+  accounts_owned_other: '%name adlı oyuncunun %count adet hesabı var:'
+  account_not_activated: '&cHesabınız henüz aktifleştirilmemiş, lütfen mail kutunuzu kontrol edin!'
+  password_changed: '&2Şifre başarıyla değiştirildi!'
+  logout: '&2Başarıyla çıkış yapıldı!'
+  reload: '&2Config ve veritabanı doğru şekilde yeniden yüklendi!'
+  usage_change_password: '&cKullanım: /changepassword <eski şifre> <yeni şifre>'
 
-# Session messages
+# IP adresi mesajları
 session:
-    valid_session: '&2Oturuma girisiniz otomatikmen yapilmistir.'
-    invalid_session: '&cIP adresin degistirildi ve oturum suren doldu!'
+  invalid_session: '&cIP adresiniz değiştirildi ve son giriş verilerinizin süresi doldu!'
+  valid_session: '&2IP adresiniz aynı olduğu için otomatik olarak giriş yaptınız.'
 
-# Error messages when joining
+# Girişteki hata mesajları
 on_join_validation:
-    same_ip_online: 'Oyunda sizin ipnizden giren biri bulunmakta!'
-    same_nick_online: '&4Senin isminde bir oyuncu suncuda bulunmakta!'
-    name_length: '&4Senin ismin ya cok kisa yada cok uzun!'
-    characters_in_name: '&4Senin isminde uygunsuz karakterler bulunmakta. Izin verilen karakterler: %valid_chars'
-    kick_full_server: '&4Sunucu suanda dolu, daha sonra tekrar deneyin!'
-    country_banned: '&4Senin bolgen sunucudan yasaklandi!'
-    not_owner_error: 'Bu hesabin sahibi degilsin. Lutfen farkli bir isim sec!'
-    invalid_name_case: 'Oyuna %valid isminde katilmalisin. %invalid ismini kullanarak katilamazsin.'
-    quick_command: 'Bu komutu cok hizli kullandin! Lutfen, sunucuya tekrar gir ve herhangi bir komut kullanmadan once biraz bekle.'
+  name_length: '&4Kullanıcı adınız ya çok kısa ya da çok uzun!'
+  characters_in_name: '&4Kullanıcı adınız geçersiz karakterler içeriyor. Kabul edilen karakterler: %valid_chars'
+  country_banned: '&4Ülkeniz bu sunucuda yasaklı!'
+  not_owner_error: 'Bu hesabın sahibi siz değilsiniz. Lütfen başka bir isim seçin!'
+  kick_full_server: '&4Sunucu dolu, daha sonra tekrar deneyin!'
+  same_nick_online: '&4Aynı kullanıcı adı zaten sunucuda oynuyor!'
+  invalid_name_case: 'Sunucuya %valid ismiyle katılmalısınız, %invalid ile değil.'
+  same_ip_online: 'Aynı IP''ye sahip bir oyuncu zaten oyunda!'
+  quick_command: 'Bir komutu çok hızlı kullandınız! Lütfen sunucuya tekrar katılın ve herhangi bir komut kullanmadan önce biraz daha bekleyin.'
 
 # Email
 email:
-    add_email_request: '&3Lutfen hesabinize eposta adresinizi komut ile ekleyin "/email add <eposta> <tekrarEposta>"'
-    usage_email_add: '&cKullanim: /email add <eposta> <tekrarEposta>'
-    usage_email_change: '&cKullanim: /email change <eskiEposta> <yeniEposta>'
-    new_email_invalid: '&cGecersiz yeni eposta, tekrar deneyin!'
-    old_email_invalid: '&cGecersiz eski eposta, tekrar deneyin!'
-    invalid: '&cGecersiz eposta, tekrar deneyin!'
-    added: '&2Eposta basariyla kullaniciniza eklendi!'
-    add_not_allowed: '&cE-posta eklenmesine izin verilmedi!'
-    request_confirmation: '&cLutfen tekrar epostanizi giriniz!'
-    changed: '&2Epostaniz basariyla degistirildi!'
-    change_not_allowed: '&cEposta degistirilmesine izin verilmedi!'
-    email_show: '&2Suanki eposta adresin: &f%email'
-    no_email_for_account: '&2Bu hesapla iliskili bir eposta bulunmuyor.'
-    already_used: '&4Eposta adresi zaten kullaniliyor.'
-    incomplete_settings: 'Hata: Gonderilen epostada bazi ayarlar tamamlanmis degil. Yetkili ile iletisime gec.'
-    send_failure: 'Eposta gonderilemedi. Yetkili ile iletisime gec.'
-    change_password_expired: 'Artik bu komutu kullanarak sifrenizi degistiremezsiniz.'
-    email_cooldown_error: '&cKisa bir sure once eposta gonderildi. Yeni bir eposta almak icin %time beklemelisin.'
+  usage_email_add: '&Kullanım: /email add <e-posta> <tekrar e-posta>'
+  usage_email_change: '&cKullanım: /email change <eski e-posta> <yeni e-posta>'
+  new_email_invalid: '&cGeçersiz yeni e-posta, tekrar deneyin!'
+  old_email_invalid: '&cGeçersiz eski e-posta, tekrar deneyin!'
+  invalid: '&cGeçersiz e-posta adresi, tekrar deneyin!'
+  added: '&2E-posta adresi hesabınıza başarıyla eklendi!'
+  request_confirmation: '&cLütfen e-posta adresinizi onaylayın!'
+  changed: '&2E-posta adresi başarılı bir şekilde değiştirildi!'
+  email_show: '&2Güncel e-posta adresiniz: &f%email'
+  incomplete_settings: 'Hata: E-posta göndermek için gerekli tüm ayarlar yapılmamış. Lütfen bir yönetici ile iletişime geçin.'
+  already_used: '&4E-posta adresi zaten kullanılıyor'
+  send_failure: 'E-posta gönderilemedi. Lütfen bir yönetici ile iletişime geçin.'
+  no_email_for_account: '&2Şu anda bu hesapla ilişkili bir e-posta adresiniz yok.'
+  add_email_request: '&3Lütfen şu komutla e-postanızı hesabınıza ekleyin: /email add <e-posta> <tekrar e-posta>'
+  change_password_expired: 'Artık bu komutu kullanarak parolanızı değiştiremezsiniz.'
+  email_cooldown_error: '&cYakın zamanda zaten bir e-posta gönderildi. Tekrar göndermeden önce %time beklemelisiniz.'
+  add_not_allowed: '&cE-posta eklenmesine izin verilmiyor.'
+  change_not_allowed: '&cE-posta adresinin değiştirilmesine izin verilmiyor.'
 
-# Password recovery by email
+# Email üzerinden şifre kurtarma
 recovery:
-    forgot_password_hint: '&3Sifreni mi unuttun ? Komut kullanarak ogrenebilirsin "/email recovery <eposta>"'
-    command_usage: '&cKullanim: /email recovery <Eposta>'
-    email_sent: '&2Sifreniz epostaniza gonderildi! Lutfen eposta kutunuzu kontrol edin!'
-    code:
-        code_sent: 'Sifre sifirlama kodu eposta adresinize gonderildi.'
-        incorrect: 'Kod dogru degil! Kullanim "/email recovery [eposta]" ile yeni bir kod olustur'
-        tries_exceeded: 'Kurtarma kodu icin girilen maksimum sayisi astiniz. "/email recovery [email]" komutunu kullanarak yeni bir tane olusturabilirsiniz.'
-        correct: 'Kurtarma kodu dogru sekilde girildi!'
-        change_password: 'Lutfen sifrenizi degistirmek icin /email setpassword <yeni sifre> komutunu kullanin.'
+  forgot_password_hint: '&3Şifrenizi mi unuttunuz? Lütfen şu komutu kullanın: /email recovery <e-posta>'
+  command_usage: '&cKullanım: /email recovery <e-posta>'
+  email_sent: '&2Kurtarma e-postası başarıyla gönderildi! Lütfen e-posta gelen kutunuzu kontrol edin!'
+  code:
+    code_sent: 'Şifrenizi sıfırlamak için bir kurtarma kodu e-postanıza gönderildi.'
+    incorrect: 'Kurtarma kodu doğru değil! Kalan %count denemeniz var.'
+    tries_exceeded: 'Kurtarma kodunu girmek için maksimum deneme sayısını aştınız. Yeni bir tane oluşturmak için "/email recovery [e-posta]" komutunu kullanın.'
+    correct: 'Kurtarma kodu doğru girildi!'
+    change_password: 'Lütfen /email setpassword <yeni şifre> komutunu kullanarak şifrenizi yeniden belirleyin.'
 
 # Captcha
 captcha:
-    usage_captcha: '&3Giris yapmak icin guvenlik kodunu komut yazarak girin "/captcha %captcha_code"'
-    wrong_captcha: '&cYanlis guvenlik kodu, kullanim sekli "/captcha %captcha_code" sohbete yazin!'
-    valid_captcha: '&2Guvenlik kodu dogrulandi!'
-    captcha_for_registration: 'Kayit olmak icin once bir captcha cozmeniz gerekiyor, lutfen bu komutu kullan: /captcha %captcha_code'
-    register_captcha_valid: '&2Gecerli captcha! /register ile kayit olabilirsiniz'
+  usage_captcha: '&3Giriş yapmak için bir captcha kodunu çözmeniz gerekli, lütfen şu komutu kullanın: /captcha %captcha_code'
+  wrong_captcha: '&cYanlış captcha, lütfen sohbete "/captcha %captcha_code" yazın!'
+  valid_captcha: '&2Captcha kodu doğru şekilde girildi!'
+  captcha_for_registration: 'Kayıt olmak için önce bir captcha çözmeniz gerekli, lütfen şu komutu kullanın:: /captcha %captcha_code'
+  register_captcha_valid: '&2Geçerli captcha! Şimdi /register ile kayıt olabilirsiniz.'
 
-# Verification code
+# Doğrulama Kodu
 verification:
-    code_required: '&3Bu komut hassas ve eposta dogrulamasi gerektiriyor! Gelen kutunuzu kontrol edin ve epostalarin talimatlarina uyun.'
-    command_usage: '&Kullanim: /verification <code>'
-    incorrect_code: '&cYanlis kod, lutfen email ile aldiginiz kodu kullanarak, chate "/verification <kod>" yazin'
-    success: '&2Kimliginiz dogrulandi! Simdi mevcut oturumdaki butun komutlari calistirabilirsiniz!'
-    already_verified: '&2Mevcut oturumda her hassas komutu zaten calistirabilirsiniz!'
-    code_expired: '&3Kodunuzun suresi doldu! Diger hassas komutlari calistirmak icin yeni bir kod alin!'
-    email_needed: '&3Kimliginizi dogrulamak icin hesabiniza bir email adresi baglamis olmaniz gerekir!!'
+  code_required: '&3Bu komut hassastır ve bir e-posta doğrulaması gerektirir! Gelen kutunuzu kontrol edin ve e-postadaki talimatları izleyin.'
+  command_usage: '&cKullanım: /verification <kod>'
+  incorrect_code: '&cYanlış kod, lütfen e-posta ile aldığınız kodu kullanarak sohbete “/verification <kod>” yazın'
+  success: '&2Kimliğiniz doğrulandı! Artık mevcut oturumdaki tüm komutları çalıştırabilirsiniz!'
+  already_verified: '&2Geçerli oturum içindeki her hassas komutu zaten çalıştırabilirsiniz!'
+  code_expired: '&3Kodunuzun süresi doldu! Yeni bir kod almak için başka bir hassas komut çalıştırın!'
+  email_needed: '&3Kimliğinizi doğrulamak için hesabınıza bir e-posta adresi bağlamanız gerekir!'
 
-# Time units
-time:
-    second: 'saniye'
-    seconds: 'saniye'
-    minute: 'dakika'
-    minutes: 'dakika'
-    hour: 'saat'
-    hours: 'saat'
-    day: 'gun'
-    days: 'gun'
-
-# Two-factor authentication
+# İki Faktörlü Doğrulama
 two_factor:
-    code_created: '&2Gizli kodunuz %code. Buradan test edebilirsin, %url'
-    confirmation_required: 'Lutfen kodunuzu /2fa confirm <kod> komutu ile dogrulayin'
-    code_required: 'Lutfen iki-faktorlu dogrulama kodunuzu /2fa code <kod> komutu ile gonderin'
-    already_enabled: 'Iki-faktorlu dogrulama zaten hesabinizda aktif durumda!'
-    enable_error_no_code: 'Sizin icin 2fa anahtari olusturulmamis ya da suresi dolmus. Lutfen /2fa add komutunu calistirin'
-    enable_success: 'Iki-faktorlu kimlik dogrulama hesabiniz icin basariyla aktif edildi'
-    enable_error_wrong_code: 'Yanlis kod veya kodun suresi dolmus. Lutfen /2fa add komutunu calistirin'
-    not_enabled_error: 'Iki-faktorlu kimlik dogrulama kodu hesabiniz icin aktif edilmemis. /2fa add komutunu calistirin'
-    removed_success: 'Iki-faktorlu dogrulama hesabinizdan basariyla kaldirilmistir'
-    invalid_code: 'Gecersiz kod!'
+  code_created: '&2Gizli kodunuz: %code. Buradan taratabilirsiniz: %url'
+  confirmation_required: 'Lütfen kodunuzu /2fa confirm <kod> komutu ile onaylayın.'
+  code_required: 'Lütfen iki faktörlü kimlik doğrulama kodunuzu /2fa code <kod> ile onaylayın.'
+  already_enabled: 'Hesabınız için iki faktörlü kimlik doğrulama zaten etkin!'
+  enable_error_no_code: 'Sizin için 2fa anahtarı oluşturulmadı veya süresi doldu. Lütfen /2fa add komutunu kullanın.'
+  enable_success: 'Hesabınız için iki faktörlü kimlik doğrulama başarıyla etkinleştirildi'
+  enable_error_wrong_code: 'Yanlış kod veya kodun süresi doldu. Lütfen /2fa add komutunu kullanın'
+  not_enabled_error: 'Hesabınız için iki faktörlü kimlik doğrulama etkin değil. Lütfen /2fa add komutunu kullanın.'
+  removed_success: 'Hesabınızdan iki faktörlü kimlik doğrulama başarıyla kaldırıldı'
+  invalid_code: 'Geçersiz kod!'
+
+# Zaman Birimleri
+time:
+  second: 'saniye'
+  seconds: 'saniye'
+  minute: 'dakika'
+  minutes: 'dakika'
+  hour: 'saat'
+  hours: 'saat'
+  day: 'gün'
+  days: 'gün'
+
+#
+# Bu çeviri Kayera tarafından yapılmıştır.
+# Umarım iyi bir gün geçiriyorsunuzdur <3 ;)
+# Çeviri işleri için ulaşabilirsiniz, discord: kayera
+#
+#  https://kayera.uk/
+#  https://kayera.uk/patreon
+#  https://kayera.uk/discord
+#  https://kayera.uk/github
+#
