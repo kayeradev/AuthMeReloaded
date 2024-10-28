@@ -1,0 +1,56 @@
+# Translation config for the AuthMe help, e.g. when /authme help or /authme help register is called
+
+# -------------------------------------------------------
+# Yardım bölümünde kullanılan metinlerin listesi
+common:
+    header: '==========[ AuthMeReloaded Yardım ]=========='
+    optional: 'İsteğe Bağlı'
+    hasPermission: 'Yetkiniz var'
+    noPermission: 'Yetkiniz yok'
+    default: 'Varsayılan'
+    result: 'Sonuç'
+    defaultPermissions:
+        notAllowed: 'Yetersiz yetki'
+        opOnly: 'Sadece Operatörler'
+        allowed: 'Herkes'
+
+# -------------------------------------------------------
+# Bireysel yardım bölümlerinin başlıkları
+# Bölümü devre dışı bırakmak için çeviri metnini boş metin olarak ayarlayın, örneğin alternatifleri gizlemek için:
+#   alternatives: ''
+section:
+    command: 'Komut'
+    description: 'Kısa açıklama'
+    detailedDescription: 'Detaylı açıklama'
+    arguments: 'Argümanlar'
+    permissions: 'Yetkiler'
+    alternatives: 'Alternatifler'
+    children: 'Komutlar'
+
+# -------------------------------------------------------
+# Alt taraftan bütün komutları değiştirebilirsiniz.
+# Örneğin /authm reload için "authme.reload" oluşturun, veya "login" için /login
+# Komutun argümanları varsa, ilk argümanı çevirmek için arg1'i aşağıdaki gibi kullanabilirsiniz ve bu böyle devam eder
+# Çevirilerin eksiksiz olması gerekmez; eksik bölümler varsayılandan sessizce alınacaktır
+# Önemli: “authme” gibi ana komutları alt komutlarından önce koyun (örn. “authme.reload”)
+commands:
+    authme.register:
+        description: 'Bir oyuncuyu kaydet'
+        detailedDescription: 'Belirli bir oyuncuyu belirli bir şifre ile kaydeder.'
+        arg1:
+            label: 'oyuncu'
+            description: 'Oyuncu ismi'
+        arg2:
+            label: 'şifre'
+            description: 'Şifre'
+
+#
+# Bu çeviri Kayera tarafından yapılmıştır.
+# Umarım iyi bir gün geçiriyorsunuzdur <3 ;)
+# Çeviri işleri için ulaşabilirsiniz, discord: kayera
+#
+#  https://kayera.uk/
+#  https://kayera.uk/patreon
+#  https://kayera.uk/discord
+#  https://kayera.uk/github
+#
